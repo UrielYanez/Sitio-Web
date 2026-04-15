@@ -1,0 +1,574 @@
+/* Reseteo básico para eliminar márgenes predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo principal lila como en la imagen */
+body {
+    background-color: #d1a3d4; 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contenedor principal que agrupa todo */
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio vertical entre secciones */
+}
+
+/* --- Encabezado --- */
+.encabezado {
+    background-color: #2c3e40; /* Gris oscuro/verdoso */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.encabezado h1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* --- Navegación Superior --- */
+.nav-principal {
+    background-color: #2c3e40;
+    border-radius: 50px; /* Forma de píldora */
+    padding: 15px 40px;
+}
+
+.nav-principal ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-principal a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* --- Área Principal y Barra Lateral --- */
+.cuerpo-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* --- Galería de Tarjetas --- */
+.galeria {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.tarjeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* Proporción rectangular vertical */
+    object-fit: cover;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.etiqueta {
+    background-color: #2c3e40;
+    color: white;
+    padding: 8px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* --- Redes Sociales (Barra Lateral) --- */
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.redes-sociales a, .circulo-vacio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: black;
+    border-radius: 50%; /* Círculos perfectos */
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.circulo-vacio {
+    background-color: #2c3e40;
+}
+
+/* --- Pie de Página --- */
+/* --- ESTILOS PIE DE PÁGINA CLÁSICO --- */
+.footer-clasico {
+    background-color: #2c3e40;
+    color: white;
+    border-radius: 20px; /* Consistencia con las tarjetas de productos/citas */
+    padding: 40px 40px 20px 40px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.footer-contenido {
+    display: grid;
+    /* Esto hace que las columnas se adapten en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-columna h3 {
+    color: #d1a3d4; /* Lila del tema para resaltar */
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Línea decorativa debajo de los títulos del footer */
+.footer-columna h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #d1a3d4;
+    border-radius: 2px;
+}
+
+.footer-columna p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.footer-columna ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-columna ul li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* Estilo para los íconos de la sección de contacto */
+.footer-columna ul li i {
+    color: #d1a3d4;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-columna a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Efecto hover: cambia a lila y se mueve un poco a la derecha */
+.footer-columna a:hover {
+    color: #d1a3d4;
+    padding-left: 5px; 
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil de separación */
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+/* --- LÓGICA VISUAL DE LAS PESTAÑAS --- */
+
+/* Ocultar todo el contenido de las pestañas por defecto */
+.tab-content {
+    display: none; 
+}
+
+/* Mostrar solo la pestaña que tenga la clase "activo" */
+.tab-content.activo {
+    display: flex; /* Mantenemos flex para no romper la estructura original */
+}
+
+/* Resaltar la opción seleccionada en el menú de navegación */
+.nav-principal a.activo {
+    color: #d1a3d4; /* Color lila del fondo para que resalte */
+    font-weight: bold;
+    border-bottom: 2px solid #d1a3d4;
+    padding-bottom: 2px;
+}
+
+/* Estilos básicos para el contenido de relleno de las nuevas pestañas */
+.pestaña-relleno {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3e40;
+    color: white;
+    border-radius: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 400px;
+    width: 100%;
+}
+
+.pestaña-relleno h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+/* --- ESTILOS PESTAÑA PRODUCTOS --- */
+.productos-contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.titulo-seccion {
+    background-color: #2c3e40;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+    display: inline-block;
+    align-self: flex-start;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Sistema de cuadrícula para las tarjetas */
+.grid-productos {
+    display: grid;
+    /* Esto hace que las tarjetas se adapten solas dependiendo del espacio */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.tarjeta-producto {
+    background-color: #2c3e40;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Pequeño efecto al pasar el mouse */
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-producto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+    color: #d1a3d4; /* Color lila del fondo principal para generar contraste */
+}
+
+.tarjeta-producto ul {
+    list-style: none;
+}
+
+.tarjeta-producto li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Viñetas personalizadas color lila */
+.tarjeta-producto li::before {
+    content: "•";
+    color: #d1a3d4;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.politica-privacidad {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.politica-privacidad a {
+    color: #2c3e40;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.politica-privacidad a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILOS PESTAÑA CITAS --- */
+.citas-contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center; 
+}
+
+.formulario-tarjeta {
+    background-color: #2c3e40;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 650px; 
+}
+
+.instrucciones {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.formulario-citas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fila-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.fila-inputs .grupo-input {
+    flex: 1; /* Hace que ambos campos midan lo mismo */
+}
+
+.formulario-citas label {
+    font-size: 1rem;
+    color: #d1a3d4;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.formulario-citas input,
+.formulario-citas select,
+.formulario-citas textarea {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Efecto al seleccionar un input */
+.formulario-citas input:focus,
+.formulario-citas select:focus,
+.formulario-citas textarea:focus {
+    box-shadow: 0 0 0 3px #d1a3d4;
+}
+
+.btn-enviar {
+    background-color: #d1a3d4;
+    color: #2c3e40;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #b886bb;
+    transform: scale(1.02);
+}
+
+/* Diseño responsivo para pantallas móviles */
+@media (max-width: 600px) {
+    .fila-inputs {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* --- ESTILOS PESTAÑA PLAZOS Y CONDICIONES --- */
+.plazos-contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.grid-plazos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.tarjeta-plazo {
+    background-color: #2c3e40;
+    color: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-plazo:hover {
+    transform: translateY(-5px);
+}
+
+.icono-plazo {
+    font-size: 2.5rem;
+    color: #d1a3d4; /* Lila del tema */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.tarjeta-plazo h3 {
+    font-size: 1.4rem;
+    color: #d1a3d4;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-plazo ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-plazo li {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tarjeta-plazo li::before {
+    content: "▹"; /* Viñeta tipo flecha */
+    color: #d1a3d4;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.2rem;
+}
+
+.tarjeta-plazo strong {
+    color: white; /* Resalta las partes importantes en blanco brillante */
+    font-weight: 600;
+}
+
+/* --- ESTILOS PESTAÑA INICIO --- */
+.inicio-contenedor {
+    display: flex;
+    align-items: center;
+    background-color: #2c3e40;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 40px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.inicio-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La imagen ocupará el máximo del contenedor izquierdo pero sin deformarse */
+.inicio-logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes suaves para la imagen si es cuadrada */
+    object-fit: contain;
+}
+
+.inicio-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.inicio-texto p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.inicio-texto strong {
+    color: #d1a3d4; /* Destacamos el nombre del estudio en color lila */
+    font-weight: 600;
+}
+
+/* Diseño responsivo: Si la pantalla es pequeña (celulares), se pone uno arriba del otro */
+@media (max-width: 768px) {
+    .inicio-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .inicio-texto .titulo-seccion {
+        align-self: center; /* Centra el título en celulares */
+    }
+}
