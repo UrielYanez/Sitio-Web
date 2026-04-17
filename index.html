@@ -1,237 +1,322 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maquetación de Diseño con Pestañas</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luckart Studio - Diseño y Arte</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
     <div class="contenedor">
-        
-        <header class="encabezado">
-            <h1>TITULO-LOGOTIPO</h1>
-        </header>
+      <header class="encabezado-fijo">
+        <div class="header-limitador">
+          <div class="brand-container">
+            <div class="logo-sitio">
+              <img src="assets/logo lila.png" alt="Luckart Studio Logo" />
+            </div>
+            <label class="nombre-estudio">Luckart Studio</label>
+          </div>
 
-        <nav class="nav-principal">
+          <nav class="nav-principal">
             <ul>
-                <li><a href="#" class="tab-link activo" data-target="incio">Inicio</a></li>
-                <li><a href="#" class="tab-link activo" data-target="nosotros">Nosotros</a></li>
-                <li><a href="#" class="tab-link" data-target="productos">Productos</a></li>
-                <li><a href="#" class="tab-link" data-target="plazos">Plazos Condiciones</a></li>
-                <li><a href="#" class="tab-link" data-target="citas">Citas</a></li>
+              <li>
+                <a href="#" class="tab-link activo" data-target="inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-link" data-target="nosotros">Nosotros</a>
+              </li>
+              <li>
+                <a href="#" class="tab-link" data-target="productos"
+                  >Productos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="tab-link" data-target="plazos">Plazos</a>
+              </li>
+              <li>
+                <a href="#" class="tab-link" data-target="citas">Citas</a>
+              </li>
             </ul>
-        </nav>
+          </nav>
+        </div>
+      </header>
 
-        <div class="contenido-pestañas">
-
-            <div id="nosotros" class="cuerpo-principal tab-content">
-                <div class="inicio-contenedor">
-                    
-                    <div class="inicio-logo">
-                        <img src="https://via.placeholder.com/400x400/2c3e40/d1a3d4?text=Logo+Luckart+Studio" alt="Logo Luckart Studio">
-                    </div>
-
-                    <div class="inicio-texto">
-                        <h2 class="titulo-seccion">Nosotros</h2>
-                        <p><strong>Luckart Studio</strong> es una marca que se dedica a la creación de ilustraciones, edición y creación de trabajos editoriales, escribir historias y crear branding.</p>
-                        <p>Nació con la idea de darle vida a las ideas propias y de los demás sin restricción a lo que imagines.</p>
-                    </div>
-
-                </div>
-            </div>
-            
-            <div id="inicio" class="cuerpo-principal tab-content" activo>
-                <main class="galeria">
-                    <div class="tarjeta">
-                        <img src="https://via.placeholder.com/300x400/2c3e40/ffffff?text=Tattos" alt="Tattos">
-                        <span class="etiqueta">Tattos</span>
-                    </div>
-                    <div class="tarjeta">
-                        <img src="https://via.placeholder.com/300x400/8b1e28/ffffff?text=Branding" alt="Branding">
-                        <span class="etiqueta">Branding</span>
-                    </div>
-                    <div class="tarjeta">
-                        <img src="https://via.placeholder.com/300x400/2c3e40/ffffff?text=Mural" alt="Mural">
-                        <span class="etiqueta">Mural</span>
-                    </div>
-                </main>
-
-                <aside class="redes-sociales">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>                    
-                </aside>
+      <div class="contenido-pestañas">
+        <div id="nosotros" class="cuerpo-principal tab-content">
+          <div class="inicio-contenedor">
+            <div class="inicio-logo">
+              <img
+                src="assets/Luckart Studio mor -02.png"
+                alt="Logo Luckart Studio"
+              />
             </div>
 
-            
-
-            
-
-            <div id="productos" class="cuerpo-principal tab-content">
-                <div class="productos-contenedor">
-                                        
-
-                    <div class="grid-productos">
-                        <div class="tarjeta-producto">
-                            <h3>Branding</h3>
-                            <ul>
-                                <li>Tarjetas de presentación</li>
-                                <li>Hojas membretadas</li>
-                                <li>Sobres corporativos</li>
-                                <li>Carpetas corporativas</li>
-                                <li>Notas adhesivas personalizadas</li>
-                            </ul>
-                        </div>
-
-                        <div class="tarjeta-producto">
-                            <h3>Murales</h3>
-                            <ul>
-                                <li>Mural de 5m por 5m</li>
-                            </ul>
-                        </div>
-
-                        <div class="tarjeta-producto">
-                            <h3>Tattos</h3>
-                            <ul>
-                                <li>En proceso...</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="inicio-texto">
+              
+              <p>
+                <strong>Luckart Studio</strong> es una marca que se dedica a la
+                creación de ilustraciones, edición y creación de trabajos
+                editoriales, escribir historias y crear branding.
+              </p>
+              <p>
+                Nació con la idea de darle vida a las ideas propias y de los
+                demás sin restricción a lo que imagines.
+              </p>
             </div>
-
-            <div id="citas" class="cuerpo-principal tab-content">
-                <div class="citas-contenedor">
-                    
-                    <div class="formulario-tarjeta">
-                        <p class="instrucciones">Déjanos tus datos y nos pondremos en contacto contigo para agendar tu cita.</p>
-                        
-                        <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST" class="formulario-citas">
-                            
-                            <div class="grupo-input">
-                                <label for="nombre">Nombre completo:</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
-                            </div>
-
-                            <div class="fila-inputs">
-                                <div class="grupo-input">
-                                    <label for="telefono">Número de teléfono:</label>
-                                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 555 123 4567">
-                                </div>
-                                
-                                <div class="grupo-input">
-                                    <label for="correo">Correo electrónico:</label>
-                                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
-                                </div>
-                            </div>
-
-                            <div class="grupo-input">
-                                <label for="servicio">Servicio o producto de interés:</label>
-                                <select id="servicio" name="servicio" required>
-                                    <option value="" disabled selected>Selecciona una opción...</option>
-                                    <option value="branding">Branding corporativo</option>
-                                    <option value="murales">Murales</option>
-                                    <option value="tatuajes">Tatuajes</option>
-                                    <option value="otro">Otro / Cotización personalizada</option>
-                                </select>
-                            </div>
-
-                            <div class="grupo-input">
-                                <label for="mensaje">Detalles de tu idea (Opcional):</label>
-                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos un poco más sobre lo que tienes en mente..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-enviar">Agendar Cita</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div id="plazos" class="cuerpo-principal tab-content">
-                <div class="plazos-contenedor">
-                    
-                    
-                    <div class="grid-plazos">
-                        <div class="tarjeta-plazo">
-                            <div class="icono-plazo">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <h3>1. Plazos de producción</h3>
-                            <ul>
-                                <li><strong>Tiempo de diseño:</strong> 2 a 5 días hábiles dependiendo del producto.</li>
-                                <li><strong>Tiempo de producción:</strong> 5 a 10 días hábiles después de aprobar el diseño.</li>
-                                <li><strong>Tiempo de entrega:</strong> depende de la paquetería o ubicación del cliente.</li>
-                            </ul>
-                        </div>
-
-                        <div class="tarjeta-plazo">
-                            <div class="icono-plazo">
-                                <i class="fas fa-money-bill-wave"></i>
-                            </div>
-                            <h3>2. Anticipo y pagos</h3>
-                            <ul>
-                                <li>Se solicita <strong>50% de anticipo</strong> para iniciar el proyecto.</li>
-                                <li>El <strong>50% restante</strong> se paga antes de la entrega o envío del producto.</li>
-                                <li>Se aceptan pagos por transferencia, tarjeta o depósito.</li>
-                            </ul>
-                        </div>
-
-                        <div class="tarjeta-plazo">
-                            <div class="icono-plazo">
-                                <i class="fas fa-edit"></i>
-                            </div>
-                            <h3>3. Cambios y revisiones</h3>
-                            <ul>
-                                <li>El cliente tiene derecho a <strong>2 o 3 revisiones gratuitas</strong> del diseño.</li>
-                                <li>Cambios adicionales pueden tener costo extra.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+          </div>
         </div>
 
-        <footer class="footer-clasico">
-            <div class="footer-contenido">
-                
-                <div class="footer-columna">
-                    <h3>TITULO-LOGOTIPO</h3>
-                    <p>Transformamos tus ideas en arte. Especialistas en branding, murales y tatuajes con diseños únicos y personalizados para cada cliente.</p>
-                </div>
-
-                <div class="footer-columna">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Mapa del sitio</a></li>
-                        <li><a href="#">Opiniones</a></li>
-                        <li><a href="#">Política de privacidad</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-columna">
-                    <h3>Contacto</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Dolores Hidalgo, Gto.</li>
-                        <li><i class="fas fa-phone"></i> +52 555 123 4567</li>
-                        <li><i class="fas fa-envelope"></i> contacto@estudio.com</li>
-                    </ul>
-                </div>
-
+        <div id="inicio" class="cuerpo-principal tab-content activo">
+          <main class="galeria">
+            <div class="tarjeta">
+              <img
+                src="https://via.placeholder.com/300x400/2c3e40/ffffff?text=Tattoos"
+                alt="Tattoos"
+              />
+              <span class="etiqueta">Tattoos</span>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Titulo-Logotipo. Todos los derechos reservados.</p>
+            <div class="tarjeta">
+              <img
+                src="https://via.placeholder.com/300x400/8b1e28/ffffff?text=Branding"
+                alt="Branding"
+              />
+              <span class="etiqueta">Branding</span>
             </div>
-        </footer>
+            <div class="tarjeta">
+              <img
+                src="https://via.placeholder.com/300x400/2c3e40/ffffff?text=Mural"
+                alt="Mural"
+              />
+              <span class="etiqueta">Mural</span>
+            </div>
+          </main>
 
+          <aside class="redes-sociales">
+            <a href="https://www.instagram.com/luka._.rt/?__pwa=1"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </aside>
+        </div>
+
+        <div id="productos" class="cuerpo-principal tab-content">
+          <div class="productos-contenedor">
+            <div class="grid-productos">
+              <div class="tarjeta-producto">
+                <h3>Branding</h3>
+                <ul>
+                  <li>Tarjetas de presentación</li>
+                  <li>Hojas membretadas</li>
+                  <li>Sobres corporativos</li>
+                  <li>Carpetas corporativas</li>
+                  <li>Notas adhesivas personalizadas</li>
+                </ul>
+              </div>
+
+              <div class="tarjeta-producto">
+                <h3>Murales</h3>
+                <ul>
+                  <li>Mural de 5m por 5m</li>
+                </ul>
+              </div>
+
+              <div class="tarjeta-producto">
+                <h3>Tattoos</h3>
+                <ul>
+                  <li>En proceso...</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="citas" class="cuerpo-principal tab-content">
+          <div class="citas-contenedor">
+            <div class="formulario-tarjeta">
+              <p class="instrucciones">
+                Déjanos tus datos y nos pondremos en contacto contigo para
+                agendar tu cita.
+              </p>
+
+              <form
+                action="https://formspree.io/f/TU_CODIGO_AQUI"
+                method="POST"
+                class="formulario-citas"
+              >
+                <div class="grupo-input">
+                  <label for="nombre">Nombre completo:</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    placeholder="Ej. Juan Pérez"
+                  />
+                </div>
+
+                <div class="fila-inputs">
+                  <div class="grupo-input">
+                    <label for="telefono">Número de teléfono:</label>
+                    <input
+                      type="tel"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="Ej. 555 123 4567"
+                    />
+                  </div>
+
+                  <div class="grupo-input">
+                    <label for="correo">Correo electrónico:</label>
+                    <input
+                      type="email"
+                      id="correo"
+                      name="correo"
+                      required
+                      placeholder="ejemplo@correo.com"
+                    />
+                  </div>
+                </div>
+
+                <div class="grupo-input">
+                  <label for="servicio">Servicio o producto de interés:</label>
+                  <select id="servicio" name="servicio" required>
+                    <option value="" disabled selected>
+                      Selecciona una opción...
+                    </option>
+                    <option value="branding">Branding corporativo</option>
+                    <option value="murales">Murales</option>
+                    <option value="tatuajes">Tatuajes</option>
+                    <option value="otro">
+                      Otro / Cotización personalizada
+                    </option>
+                  </select>
+                </div>
+
+                <div class="grupo-input">
+                  <label for="mensaje">Detalles de tu idea (Opcional):</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    placeholder="Cuéntanos un poco más sobre lo que tienes en mente..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Agendar Cita</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="plazos" class="cuerpo-principal tab-content">
+          <div class="plazos-contenedor">
+            <div class="grid-plazos">
+              <div class="tarjeta-plazo">
+                <div class="icono-plazo">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <h3>1. Plazos de producción</h3>
+                <ul>
+                  <li>
+                    <strong>Tiempo de diseño:</strong> 2 a 5 días hábiles
+                    dependiendo del producto.
+                  </li>
+                  <li>
+                    <strong>Tiempo de producción:</strong> 5 a 10 días hábiles
+                    después de aprobar el diseño.
+                  </li>
+                  <li>
+                    <strong>Tiempo de entrega:</strong> depende de la paquetería
+                    o ubicación del cliente.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tarjeta-plazo">
+                <div class="icono-plazo">
+                  <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h3>2. Anticipo y pagos</h3>
+                <ul>
+                  <li>
+                    Se solicita <strong>50% de anticipo</strong> para iniciar el
+                    proyecto.
+                  </li>
+                  <li>
+                    El <strong>50% restante</strong> se paga antes de la entrega
+                    o envío del producto.
+                  </li>
+                  <li>
+                    Se aceptan pagos por transferencia, tarjeta o depósito.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tarjeta-plazo">
+                <div class="icono-plazo">
+                  <i class="fas fa-edit"></i>
+                </div>
+                <h3>3. Cambios y revisiones</h3>
+                <ul>
+                  <li>
+                    El cliente tiene derecho a
+                    <strong>2 o 3 revisiones gratuitas</strong> del diseño.
+                  </li>
+                  <li>Cambios adicionales pueden tener costo extra.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <footer class="footer-full">
+      <div class="footer-limitador">
+        <div class="footer-contenido">
+          <div class="footer-columna">
+            <h3>LUCKART STUDIO</h3>
+            <p>
+              Transformamos tus ideas en arte. Especialistas en branding,
+              murales y tatuajes con diseños únicos y personalizados para cada
+              cliente.
+            </p>
+          </div>
+
+          <div class="footer-columna">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Mapa del sitio</a></li>
+              <li><a href="#">Opiniones</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-columna">
+            <h3>Contacto</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Dolores Hidalgo, Gto.
+              </li>
+              <li><i class="fas fa-phone"></i> +52 555 123 4567</li>
+              <li><i class="fas fa-envelope"></i> contacto@estudio.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Luckart Studio. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

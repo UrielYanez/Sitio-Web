@@ -8,11 +8,102 @@
 
 /* Fondo principal lila como en la imagen */
 body {
-    background-color: #d1a3d4; 
+    /* Gradiente que va del lila original a uno más oscuro en la parte inferior */
+    background: linear-gradient(to bottom, #d1a3d4, #8a668c);
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Evita que el contenido quede oculto bajo la barra fija */
+    min-height: 100vh; /* Asegura que el fondo cubra al menos el 100% de la pantalla */
+}
+
+/* --- Encabezado 100% Ancho y Fijo --- */
+.encabezado-fijo {
+    width: 100%;
+    background-color: #2c3e40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Contenedor que agrupa logo y etiqueta */
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el logo y el nombre */
+}
+
+/* Estilos para la etiqueta del nombre */
+.nombre-estudio {
+    color: #d1a3d4; /* Color lila característico del estudio */
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+/* Ajuste de la navegación para que se mantenga a la derecha */
+.header-limitador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* Aseguramos que el logo no sea demasiado grande */
+.logo-sitio img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* --- Navegación Fusionada --- */
+.nav-principal {
+    /* Eliminamos el fondo de píldora anterior ya que ahora está integrado */
+    background: transparent;
+    padding: 0;
+}
+
+.nav-principal ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-principal a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-principal a.activo {
+    color: #d1a3d4;
+    border-bottom: 2px solid #d1a3d4;
+}
+
+/* --- Ajuste del Contenedor Principal --- */
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     padding: 20px;
 }
+
+/* Ocultamos el header viejo si aún existe en el CSS */
+.encabezado { display: none; }
 
 /* Contenedor principal que agrupa todo */
 .contenedor {
@@ -123,27 +214,112 @@ body {
     background-color: #2c3e40;
 }
 
-/* --- Pie de Página --- */
-/* --- ESTILOS PIE DE PÁGINA CLÁSICO --- */
-.footer-clasico {
+/* =========================================
+   ESTILOS DEL PIE DE PÁGINA (FOOTER 100%)
+   ========================================= */
+
+.footer-full {
+    width: 100%;
     background-color: #2c3e40;
     color: white;
-    border-radius: 20px; /* Consistencia con las tarjetas de productos/citas */
-    padding: 40px 40px 20px 40px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    width: 100%;
+    margin-top: 50px;
+    padding: 60px 0 20px 0;
+}
+
+.footer-limitador {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-contenido {
     display: grid;
-    /* Esto hace que las columnas se adapten en pantallas pequeñas */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    margin-bottom: 30px;
+    /* Distribución en 3 columnas iguales */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (TABLETS Y MÓVILES)
+   ========================================= */
+
+@media (max-width: 850px) {
+    /* 1. Ajuste del Encabezado y Menú */
+    .header-limitador {
+        flex-direction: column; /* Apila el logo y el menú uno sobre otro */
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .nav-principal ul {
+        flex-wrap: wrap; /* Permite que los botones del menú bajen de línea si no caben */
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    body {
+        padding-top: 140px; /* Damos más espacio superior porque el header ahora es más alto */
+    }
+
+    /* 2. Pestaña de Inicio: Galería y Redes Sociales */
+    #inicio.cuerpo-principal {
+        flex-direction: column; /* Apila la galería arriba y redes sociales abajo */
+    }
+
+    .galeria {
+        flex-direction: column; /* Pone las 3 tarjetas de fotos en una sola columna */
+        width: 100%;
+        gap: 30px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 400px; /* Evita que las fotos se hagan gigantes en tablets */
+        margin: 0 auto; /* Centra las tarjetas */
+    }
+
+    .redes-sociales {
+        flex-direction: row; /* Convierte la columna de íconos en una fila horizontal */
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* 3. Ajuste de espacios para no asfixiar la pantalla del móvil */
+    .contenedor {
+        padding: 10px;
+    }
+
+    .inicio-contenedor {
+        padding: 25px 15px;
+    }
+
+    .formulario-tarjeta,
+    .tarjeta-plazo,
+    .tarjeta-producto {
+        padding: 20px;
+    }
+}
+
+/* Ajustes finos para celulares muy pequeños */
+@media (max-width: 500px) {
+    .nombre-estudio {
+        font-size: 1.2rem; /* Achicamos ligeramente el nombre del estudio */
+    }
+    
+    .nav-principal a {
+        font-size: 1rem; /* Achicamos ligeramente los enlaces */
+    }
+
+    body {
+        padding-top: 170px; /* Compensamos por si el menú ocupa 3 o más líneas */
+    }
 }
 
 .footer-columna h3 {
-    color: #d1a3d4; /* Lila del tema para resaltar */
+    color: #d1a3d4;
     font-size: 1.3rem;
     margin-bottom: 20px;
     position: relative;
@@ -151,7 +327,7 @@ body {
     font-weight: 400;
 }
 
-/* Línea decorativa debajo de los títulos del footer */
+/* Línea decorativa lila debajo de los títulos */
 .footer-columna h3::after {
     content: '';
     position: absolute;
@@ -171,12 +347,13 @@ body {
 
 .footer-columna ul {
     list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.footer-columna ul li {
+.footer-columna li {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -184,7 +361,7 @@ body {
     font-size: 1rem;
 }
 
-/* Estilo para los íconos de la sección de contacto */
+/* Estilo para los íconos (FontAwesome) de la sección de contacto */
 .footer-columna ul li i {
     color: #d1a3d4;
     font-size: 1.2rem;
@@ -198,7 +375,7 @@ body {
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
-/* Efecto hover: cambia a lila y se mueve un poco a la derecha */
+/* Efecto al pasar el mouse: cambia a lila y se mueve un poco a la derecha */
 .footer-columna a:hover {
     color: #d1a3d4;
     padding-left: 5px; 
@@ -432,13 +609,6 @@ body {
     transform: scale(1.02);
 }
 
-/* Diseño responsivo para pantallas móviles */
-@media (max-width: 600px) {
-    .fila-inputs {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
 /* --- ESTILOS PESTAÑA PLAZOS Y CONDICIONES --- */
 .plazos-contenedor {
@@ -519,12 +689,29 @@ body {
 .inicio-contenedor {
     display: flex;
     align-items: center;
-    background-color: #2c3e40;
-    border-radius: 20px;
-    padding: 40px;
+    /* Eliminamos fondo, bordes y sombras */
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    /* Mantenemos la distribución */
+    padding: 20px 0; 
     gap: 40px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     width: 100%;
+}
+
+/* Cambiamos el color del texto para que sea legible sobre el fondo lila */
+.inicio-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #000000; /* Usamos el gris oscuro del tema para el texto */
+}
+
+.inicio-texto p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #000000; /* Texto oscuro sobre fondo claro */
 }
 
 .inicio-logo {
@@ -542,33 +729,7 @@ body {
     object-fit: contain;
 }
 
-.inicio-texto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: white;
-}
-
-.inicio-texto p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #e0e0e0;
-}
-
 .inicio-texto strong {
-    color: #d1a3d4; /* Destacamos el nombre del estudio en color lila */
+    color: #000000; /* Destacamos el nombre del estudio en color lila */
     font-weight: 600;
-}
-
-/* Diseño responsivo: Si la pantalla es pequeña (celulares), se pone uno arriba del otro */
-@media (max-width: 768px) {
-    .inicio-contenedor {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .inicio-texto .titulo-seccion {
-        align-self: center; /* Centra el título en celulares */
-    }
 }
