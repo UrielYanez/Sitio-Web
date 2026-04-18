@@ -25,4 +25,27 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(targetId).classList.add('activo');
         });
     });
+
+    // --- LÓGICA DE LOS CARRUSELES AUTOMÁTICOS ---
+    // Seleccionamos todos los contenedores que NO tienen la clase 'unica'
+    const carruseles = document.querySelectorAll('.contenedor-imagen:not(.unica)');
+
+    carruseles.forEach(carrusel => {
+        const imagenes = carrusel.querySelectorAll('img');
+        if (imagenes.length <= 1) return; // Si no hay más de 1 imagen, no hace nada
+
+        let indiceActual = 0;
+
+        // Intervalo para cambiar de imagen cada 3 segundos (3000ms)
+        setInterval(() => {
+            // 1. Ocultamos la imagen actual
+            imagenes[indiceActual].classList.remove('activa');
+            
+            // 2. Calculamos la siguiente (si llega al final, regresa a 0)
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            
+            // 3. Mostramos la nueva imagen
+            imagenes[indiceActual].classList.add('activa');
+        }, 3000); 
+    });
 });

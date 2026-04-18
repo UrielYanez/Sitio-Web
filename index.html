@@ -59,7 +59,6 @@
             </div>
 
             <div class="inicio-texto">
-              
               <p>
                 <strong>Luckart Studio</strong> es una marca que se dedica a la
                 creación de ilustraciones, edición y creación de trabajos
@@ -76,30 +75,93 @@
         <div id="inicio" class="cuerpo-principal tab-content activo">
           <main class="galeria">
             <div class="tarjeta">
-              <img
-                src="https://via.placeholder.com/300x400/2c3e40/ffffff?text=Tattoos"
-                alt="Tattoos"
-              />
-              <span class="etiqueta">Tattoos</span>
+              <div class="contenedor-imagen">
+                <img src="assets/tatto1.JPG" class="activa" alt="Tattoo 1" />
+                <img src="assets/tatto2.jpeg" alt="Tattoo 2" />
+                <img src="assets/tatto3.jpeg" alt="Tattoo 3" />
+              </div>
+              <a
+                href="#"
+                class="etiqueta tab-link"
+                data-target="detalle-tattoos"
+                >Ver Tattoos</a
+              >
             </div>
+
             <div class="tarjeta">
-              <img
-                src="https://via.placeholder.com/300x400/8b1e28/ffffff?text=Branding"
-                alt="Branding"
-              />
-              <span class="etiqueta">Branding</span>
+              <div class="contenedor-imagen unica">
+                <img src="assets/Branding.JPG" class="activa" alt="Branding" />
+              </div>
+              <a
+                href="#"
+                class="etiqueta tab-link"
+                data-target="detalle-branding"
+                >Ver Branding</a
+              >
             </div>
+
             <div class="tarjeta">
-              <img
-                src="https://via.placeholder.com/300x400/2c3e40/ffffff?text=Mural"
-                alt="Mural"
-              />
-              <span class="etiqueta">Mural</span>
+              <div class="contenedor-imagen">
+                <img src="assets/mural1.JPG" class="activa" alt="Mural 1" />
+                <img src="assets/mural2.jpeg" alt="Mural 2" />
+                <img src="assets/mural3.jpeg" alt="Mural 3" />
+                <img src="assets/mural4.jpeg" alt="Mural 4" />
+                <img src="assets/mural5.JPG" alt="Mural 5" />
+              </div>
+              <a
+                href="#"
+                class="etiqueta tab-link"
+                data-target="detalle-murales"
+                >Ver Murales</a
+              >
             </div>
           </main>
 
+          <div id="detalle-tattoos" class="cuerpo-principal tab-content">
+            <div class="galeria-detallada">
+              <h2 class="titulo-seccion">Galería de Tatuajes</h2>
+              <div class="grid-galeria">
+                <img src="assets/tatto1.JPG" alt="Tattoo 1" />
+                <img src="assets/tatto2.jpeg" alt="Tattoo 2" />
+                <img src="assets/tatto3.jpeg" alt="Tattoo 3" />
+              </div>
+              <a href="#" class="btn-enviar tab-link" data-target="inicio"
+                >Volver al Inicio</a
+              >
+            </div>
+          </div>
+
+          <div id="detalle-branding" class="cuerpo-principal tab-content">
+            <div class="galeria-detallada">
+              <h2 class="titulo-seccion">Galería de Branding</h2>
+              <div class="grid-galeria">
+                <img src="assets/Branding.JPG" alt="Branding 1" />
+              </div>
+              <a href="#" class="btn-enviar tab-link" data-target="inicio"
+                >Volver al Inicio</a
+              >
+            </div>
+          </div>
+
+          <div id="detalle-murales" class="cuerpo-principal tab-content">
+            <div class="galeria-detallada">
+              <h2 class="titulo-seccion">Galería de Murales</h2>
+              <div class="grid-galeria">
+                <img src="assets/mural1.JPG" alt="Mural 1" />
+                <img src="assets/mural2.jpeg" alt="Mural 2" />
+                <img src="assets/mural3.jpeg" alt="Mural 3" />
+                <img src="assets/mural4.jpeg" alt="Mural 4" />
+                <img src="assets/mural5.JPG" alt="Mural 5" />
+              </div>
+              <a href="#" class="btn-enviar tab-link" data-target="inicio"
+                >Volver al Inicio</a
+              >
+            </div>
+          </div>
           <aside class="redes-sociales">
-            <a href="https://www.instagram.com/luka._.rt/?__pwa=1"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/luka._.rt/?__pwa=1"
+              ><i class="fab fa-instagram"></i
+            ></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-whatsapp"></i></a>
           </aside>
